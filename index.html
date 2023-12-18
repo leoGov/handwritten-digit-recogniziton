@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Распознавание рукописных чисел</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Нарисовать цифру</h1>
+        <div class="container-canvas">
+            <div class="canvas-block">
+                <canvas id="canvas" width="380px" height="380px" class="canvas"></canvas>
+            </div>
+            <div class="result-block">
+                <h2 id="result" class="result-txt">Нарисованая цифра:</h2>
+                <div class="btns">
+                    <button type="button" class="btn btn-primary btn-block" onclick="predictModel()">Предсказать</button>
+                    <button type="button" class="btn btn-secondary btn-block" onclick="clearCanvas()">Очистить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
